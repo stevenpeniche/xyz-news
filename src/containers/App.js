@@ -1,17 +1,33 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import HomeContainer from './HomeContainer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sources: [
+        {title: 'HackerNews', path: '/hacker-news'}
+      ],
+      currentSource: null,
+    }
+  };
+
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <HomeContainer />
+          <Route
+            exact path="/"
+            sources={this.state.sources}
+            render={(sources) => (
+              <HomeContainer sources={this.state.sources} />
+            )}
+          />
         </div>
       </BrowserRouter>
     );
-  }
+  };
 }
 
 export default App;

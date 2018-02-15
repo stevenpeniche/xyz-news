@@ -3,7 +3,7 @@ import Sources from '../components/Sources';
 
 class SourcesContainer extends Component {
   render() {
-    return <Sources /> ;
+    return <Sources sources={this.props.sources}/> ;
   }
 }
 
