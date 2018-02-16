@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Home from '../components/Home';
 import HackerNewsContainer from './HackerNewsContainer';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class App extends Component {
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
     this.state = {
       sources: [
-        {title: 'HackerNews', path: '/hacker-news'}
+        {title: 'Hacker News', path: '/hacker-news', acronym: 'HN'}
       ],
       currentSource: null
     }
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
+        <div className="app">
           <NavBar />
           <Route
             exact path="/"

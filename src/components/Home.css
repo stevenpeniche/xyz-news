@@ -1,0 +1,54 @@
+.home {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sources {
+  height: 100px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+  background: #f5f5f5;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.source {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.source-icon {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+	background: #ff6600;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+  border-radius: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  text-align: center;
+}
+
+.source-icon:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.hacker-news-acronym {
+  position: relative;
+  top: 20px;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.hacker-news-title {
+  font-size: 14px;
+}

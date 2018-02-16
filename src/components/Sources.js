@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 
 const Sources = (props) => {
   return (
-    <div className="Sources">
+    <div className="sources">
     {props.sources.map((source, i) => {
       return (
-        <div key={i}>
-          <Link to={source.path} className="source-link">
+        <Link to={source.path} key={i} className="source">
+          <div className="source-icon">
+            <div className="hacker-news-acronym">
+              {source.acronym}
+            </div>
+          </div>
+          <div className="hacker-news-title">
             {source.title}
-          </Link>
-        </div>
+          </div>
+        </Link>
       )
     })}
     </div>
