@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Home from '../components/Home';
+import HomeContainer from './HomeContainer';
 import HackerNewsContainer from './HackerNewsContainer';
 import './App.css';
 
@@ -17,7 +17,7 @@ class App extends Component {
     }
   };
 
-  changeCurrentSource(source) {
+  changeCurrentSource(source=null) {
     this.setState({
       currentSource: source
     });
@@ -31,8 +31,9 @@ class App extends Component {
           <Route
             exact path="/"
             render={() => (
-              <Home
+              <HomeContainer
                 sources={this.state.sources}
+                changeCurrentSource={this.changeCurrentSource}
               />
             )}
           />
