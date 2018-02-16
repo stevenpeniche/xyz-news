@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import Home from '../components/Home';
+import HomeContainer from './HomeContainer';
 import HackerNewsContainer from './HackerNewsContainer';
+import './App.css';
 
 class App extends Component {
   constructor(props) {
@@ -10,13 +11,13 @@ class App extends Component {
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
     this.state = {
       sources: [
-        {title: 'HackerNews', path: '/hacker-news'}
+        {title: 'Hacker News', path: '/hacker-news', acronym: 'HN'}
       ],
       currentSource: null
     }
   };
 
-  changeCurrentSource(source) {
+  changeCurrentSource(source=null) {
     this.setState({
       currentSource: source
     });
@@ -25,13 +26,14 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="App">
-          <NavBar />
+        <div className="app">
+          <NavBar currentSource={this.state.currentSource}/>
           <Route
             exact path="/"
             render={() => (
-              <Home
+              <HomeContainer
                 sources={this.state.sources}
+                changeCurrentSource={this.changeCurrentSource}
               />
             )}
           />
