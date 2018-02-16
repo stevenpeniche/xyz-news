@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import HomeContainer from './HomeContainer';
+import Home from '../components/Home';
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +21,7 @@ class App extends Component {
             exact path="/"
             sources={this.state.sources}
             render={(sources) => (
-              <HomeContainer sources={this.state.sources} />
+              <Home sources={this.state.sources} />
             )}
           />
         </div>
