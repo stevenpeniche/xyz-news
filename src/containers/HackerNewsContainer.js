@@ -3,7 +3,7 @@ import HackerNews from '../components/HackerNews'
 
 class HackerNewsContainer extends Component  {
   state = {
-    source: 'HackerNews'
+    source: 'Hacker News'
   }
 
   componentDidMount() {
