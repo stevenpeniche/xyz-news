@@ -7,7 +7,9 @@ const Sources = (props) => {
     {props.sources.map((source, i) => {
       return (
         <div key={i}>
-          <Link to={`/${source.path}`} className="source-link">{source.title}</Link>
+          <Link to={source.path} className="source-link">
+            {source.title}
+          </Link>
         </div>
       )
     })}
