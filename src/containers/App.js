@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <NavBar />
+          <NavBar currentSource={this.state.currentSource}/>
           <Route
             exact path="/"
             render={() => (
