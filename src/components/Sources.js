@@ -10,7 +10,7 @@ const Sources = (props) => {
           <div className="source-icon-container">
             <img className="source-icon" src={source.faviconURL} alt={source.title} />
           </div>
-          <div className="hacker-news-title">
+          <div className="source-title">
             {source.title}
           </div>
         </Link>
