@@ -12,7 +12,7 @@ class HackerNewsContainer extends Component  {
 
   render() {
     return (
-      <SourcePage />
+      <SourcePage source={this.state.source}/>
     );
   }
 }
