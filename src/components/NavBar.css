@@ -6,6 +6,9 @@
   height: 38px;
   overflow: hidden;
   background-color: #FEFEFF;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: hsla(0, 0%, 0%, 0.1);
 }
 
 #logo {
