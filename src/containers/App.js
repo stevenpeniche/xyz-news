@@ -5,13 +5,21 @@ import HomeContainer from './HomeContainer';
 import HackerNewsContainer from './HackerNewsContainer';
 import './App.css';
 
+const faviconFinder = (rootURL) => {
+  return `https://besticon-demo.herokuapp.com/icon?url=${rootURL}/&size=70..120..200`
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
     this.state = {
       sources: [
-        {title: 'Hacker News', path: '/hacker-news', acronym: 'HN'}
+        {
+          title: 'Hacker News',
+          path: '/hacker-news',
+          faviconURL: faviconFinder('https://news.ycombinator.com')
+        }
       ],
       currentSource: null
     }
