@@ -24,13 +24,13 @@ class App extends Component {
           faviconURL: faviconFinder('https://news.ycombinator.com')
         }
       ],
-      currentSource: null
+      currentSourceID: null
     }
   };
 
   changeCurrentSource(source=null) {
     this.setState({
-      currentSource: source
+      currentSourceID: source
     });
   }
 

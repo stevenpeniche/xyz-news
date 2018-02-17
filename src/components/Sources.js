@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const Sources = (props) => {
   return (
     <div className="sources">
-    {props.sources.map((source, i) => {
+    {props.sources.map((source) => {
       return (
-        <Link to={source.path} key={i} className="source">
+        <Link to={source.path} key={source.id} className="source">
           <div className="source-icon-container">
             <img className="source-icon" src={source.faviconURL} alt={source.title} />
           </div>
