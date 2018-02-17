@@ -1,3 +1,35 @@
 .app {
   height: 100vh;
 }
+
+.source {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.source-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.source-icon {
+  width: 60px;
+  height: 60px;
+	background: #ff6600;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+  border-radius: 50px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.source-title {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.leviate:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}

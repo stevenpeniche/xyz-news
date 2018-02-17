@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Sources.css';
 
 const Sources = (props) => {
   return (
@@ -8,7 +9,7 @@ const Sources = (props) => {
       return (
         <Link to={source.path} key={source.id} className="source">
           <div className="source-icon-container">
-            <img className="source-icon" src={source.faviconURL} alt={source.title} />
+            <img className="source-icon leviate" src={source.faviconURL} alt={source.title} />
           </div>
           <div className="source-title">
             {source.title}
