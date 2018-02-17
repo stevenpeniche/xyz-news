@@ -3,17 +3,16 @@ import SourcePage from '../components/SourcePage'
 
 class HackerNewsContainer extends Component  {
   state = {
-    sourceTitle: 'Hacker News',
-    source: this.props.findSource('Hacker News')
+    source: this.props.findSource(this.props.path),
   }
 
   componentDidMount() {
-    this.props.changeCurrentSource(this.state.sourceTitle);
+    this.props.changeCurrentSource(this.state.source.id);
   }
 
   render() {
     return (
-      <SourcePage source={this.state.source} sourceTitle={this.state.sourceTitle}/>
+      <SourcePage source={this.state.source}/>
     );
   }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import shortid from 'shortid';
 import NavBar from '../components/NavBar';
 import HomeContainer from './HomeContainer';
 import HackerNewsContainer from './HackerNewsContainer';
@@ -17,6 +18,7 @@ class App extends Component {
     this.state = {
       sources: [
         {
+          id: shortid.generate(),
           title: 'Hacker News',
           path: '/hacker-news',
           faviconURL: faviconFinder('https://news.ycombinator.com')
@@ -32,9 +34,9 @@ class App extends Component {
     });
   }
 
-  findSource(title) {
+  findSource(path) {
     return this.state.sources.find((item) => {
-      return item.title === title
+      return item.path === path
     });
   }
 
@@ -54,8 +56,9 @@ class App extends Component {
           />
           <Route
             exact path="/hacker-news"
-            render={() => (
+            render={(props) => (
               <HackerNewsContainer
+                path={props.match.path}
                 changeCurrentSource={this.changeCurrentSource}
                 findSource={this.findSource}
               />
