@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HackerNews from '../components/HackerNews'
+import SourcePage from '../components/SourcePage'
 
 class HackerNewsContainer extends Component  {
   state = {
@@ -12,7 +12,7 @@ class HackerNewsContainer extends Component  {
 
   render() {
     return (
-      <HackerNews />
+      <SourcePage />
     );
   }
 }
