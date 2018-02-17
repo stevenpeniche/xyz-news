@@ -13,6 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
+    this.findSource = this.findSource.bind(this);
     this.state = {
       sources: [
         {
@@ -28,6 +29,12 @@ class App extends Component {
   changeCurrentSource(source=null) {
     this.setState({
       currentSource: source
+    });
+  }
+
+  findSource(title) {
+    return this.state.sources.find((item) => {
+      return item.title === title
     });
   }
 
@@ -50,6 +57,7 @@ class App extends Component {
             render={() => (
               <HackerNewsContainer
                 changeCurrentSource={this.changeCurrentSource}
+                findSource={this.findSource}
               />
             )}
           />

@@ -5,7 +5,10 @@ const SourcePage = (props) => {
   return (
     <div className="source-page">
       <div className="source-title">
-        Hello {props.source}!
+        Hello {props.sourceTitle}!
+      </div>
+      <div>
+        <img src={props.source.faviconURL} alt={props.sourceTitle} />
       </div>
     </div>
   );
