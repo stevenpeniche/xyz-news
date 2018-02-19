@@ -1,6 +1,8 @@
 import React from 'react';
 import Topics from './Topics';
 import SearchBar from './SearchBar';
+import HackerNewsFeed from './HackerNewsFeed';
+import NewsFeed from './NewsFeed';
 import './SourcePage.css';
 
 const SourcePage = (props) => {
@@ -19,6 +21,12 @@ const SourcePage = (props) => {
       </div>
       <div className="source-page-main">
         <SearchBar />
+        {
+          props.source.path === '/hacker-news' ?
+          <HackerNewsFeed />
+          :
+          <NewsFeed />
+        }
       </div>
     </div>
   );

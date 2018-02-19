@@ -11,7 +11,7 @@
 .topic {
   margin-top: 15px;
   margin-bottom: 15px;
-  transition-duration: 500ms;
+  transition-duration: 400ms;
 }
 
 .topic:hover {
