@@ -21,7 +21,8 @@ class App extends Component {
           id: shortid.generate(),
           title: 'Hacker News',
           path: '/hacker-news',
-          faviconURL: faviconFinder('https://news.ycombinator.com')
+          faviconURL: faviconFinder('https://news.ycombinator.com'),
+          topics: ['Top', 'New', 'Best', 'Ask', 'Show', 'Jobs']
         }
       ],
       currentSourceID: null

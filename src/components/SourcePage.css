@@ -5,12 +5,24 @@
   display: grid;
   grid-template-columns: 20% auto;
   grid-template-rows: 38px auto;
-  /* justify-content: center; */
 }
 
 .source-page-sidebar {
   grid-row-start: 2;
+  display: flex;
+  flex-direction: column;
   margin-top: 40px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.source-page-identifier {
+  order: 1;
+  text-align: center;
+}
+
+.source-topics {
+  order: 2;
+  margin-top: 60px;
 }
 
 .source-page-main {
