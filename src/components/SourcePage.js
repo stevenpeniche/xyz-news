@@ -11,9 +11,7 @@ const SourcePage = (props) => {
           <div className="source-icon-container">
             <img className="source-icon" src={props.source.faviconURL} alt={props.source.title} />
           </div>
-          <div className="source-title">
-            {props.source.title}
-          </div>
+
         </div>
         <Topics topics={props.source.topics}/>
       </div>
