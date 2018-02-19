@@ -20,10 +20,15 @@
   text-align: center;
 }
 
-.source-topics {
+.source-topics-container {
   order: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.source-topics {
   margin-top: 40px;
-  text-align: center;
+  margin-left:
 }
 
 .source-page-main {

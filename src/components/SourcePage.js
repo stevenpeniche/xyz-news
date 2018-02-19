@@ -11,9 +11,11 @@ const SourcePage = (props) => {
           <div className="source-icon-container">
             <img className="source-icon" src={props.source.faviconURL} alt={props.source.title} />
           </div>
-
         </div>
-        <Topics topics={props.source.topics}/>
+        <Topics
+          topics={props.source.topics}
+          currentTopic={props.currentTopic}
+          changeCurrentTopic={props.changeCurrentTopic}/>
       </div>
       <div className="source-page-main">
         <SearchBar />

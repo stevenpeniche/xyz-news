@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SourcePage from '../components/SourcePage'
+import SourcePageContainer from './SourcePageContainer'
 
 class HackerNewsContainer extends Component  {
   state = {
@@ -12,7 +12,7 @@ class HackerNewsContainer extends Component  {
 
   render() {
     return (
-      <SourcePage source={this.state.source}/>
+      <SourcePageContainer source={this.state.source}/>
     );
   }
 }

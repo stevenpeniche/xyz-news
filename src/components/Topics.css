@@ -11,4 +11,14 @@
 .topic {
   margin-top: 15px;
   margin-bottom: 15px;
+  transition-duration: 500ms;
+}
+
+.topic:hover {
+  cursor: pointer;
+  color: #ff6600;
+}
+
+.active-topic {
+  color: #ff6600;
 }
