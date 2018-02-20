@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import shortid from 'shortid';
 import NavBar from '../components/NavBar';
 import HomeContainer from './HomeContainer';
-import HackerNewsContainer from './HackerNewsContainer';
+import SourcePageContainer from './SourcePageContainer';
 import './App.css';
 
 const faviconFinder = (rootURL) => {
@@ -14,15 +13,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
-    this.findSource = this.findSource.bind(this);
     this.state = {
       sources: [
         {
-          id: shortid.generate(),
+          id: 'hacker-news',
           title: 'Hacker News',
-          path: '/hacker-news',
           faviconURL: faviconFinder('https://news.ycombinator.com'),
           topics: ['Top', 'New', 'Best', 'Ask', 'Show', 'Jobs']
+        },
+        {
+          id: 'bleacher-report',
+          title: 'Bleacher Report',
+          faviconURL: faviconFinder('https://bleacherreport.com'),
+          topics: ['MLB', 'NFL', 'NBA', 'UFC', 'Boxing', 'Wrestling']
         }
       ],
       currentSourceID: null
@@ -32,12 +35,6 @@ class App extends Component {
   changeCurrentSource(source=null) {
     this.setState({
       currentSourceID: source
-    });
-  }
-
-  findSource(path) {
-    return this.state.sources.find((item) => {
-      return item.path === path
     });
   }
 
@@ -55,16 +52,22 @@ class App extends Component {
               />
             )}
           />
-          <Route
-            exact path="/hacker-news"
-            render={(props) => (
-              <HackerNewsContainer
-                path={props.match.path}
-                changeCurrentSource={this.changeCurrentSource}
-                findSource={this.findSource}
-              />
-            )}
-          />
+          {
+            this.state.sources.map((source) => {
+              return(
+                <Route
+                  exact path={`/${source.id}`}
+                  render={(props) => (
+                    <SourcePageContainer
+                      source={source}
+                      path={props.match.path}
+                      changeCurrentSource={this.changeCurrentSource}
+                    />
+                  )}
+                />
+              )
+            })
+          }
         </div>
       </BrowserRouter>
     );

@@ -6,8 +6,14 @@ class SourcePageContainer extends Component  {
     super(props);
     this.changeCurrentTopic = this.changeCurrentTopic.bind(this);
     this.state = {
-      currentTopic: 'Top'
+      currentTopic: null
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      currentTopic: this.props.source.topics[0]
+    })
   }
 
   changeCurrentTopic(topic) {

@@ -7,7 +7,7 @@ const Sources = (props) => {
     <div className="sources">
     {props.sources.map((source) => {
       return (
-        <Link to={source.path} key={source.id} className="source">
+        <Link to={`/${source.id}`} key={source.id} className="source">
           <div className="source-icon-container">
             <img className="source-icon leviate" src={source.faviconURL} alt={source.title} />
           </div>
