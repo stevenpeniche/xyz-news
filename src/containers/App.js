@@ -19,13 +19,57 @@ class App extends Component {
           id: 'hacker-news',
           title: 'Hacker News',
           faviconURL: faviconFinder('https://news.ycombinator.com'),
-          topics: ['Top', 'New', 'Best', 'Ask', 'Show', 'Jobs']
+          primaryColor: '#ff6600',
+          topics: [
+            {
+              name: 'Top',
+              data: []
+            },
+            {
+              name: 'New',
+              data: []
+            },
+            {
+              name: 'Ask',
+              data: []
+            },
+            {
+              name: 'Jobs',
+              data: []
+            }
+          ]
         },
         {
           id: 'bleacher-report',
           title: 'Bleacher Report',
           faviconURL: faviconFinder('https://bleacherreport.com'),
-          topics: ['MLB', 'NFL', 'NBA', 'UFC', 'Boxing', 'Wrestling']
+          primaryColor: '#000000',
+          topics: [
+            {
+              name: 'MLB',
+              data: []
+            },
+            {
+              name: 'NFL',
+              data: []
+            },
+            {
+              name: 'NBA',
+              data: []
+            },
+            {
+              name: 'UFC',
+              data: []
+            },
+            {
+              name: 'Boxing',
+              data: []
+            },
+            {
+              name: 'Wrestling',
+              data: []
+            }
+          ]
         }
       ],
       currentSourceID: null
@@ -56,6 +100,7 @@ class App extends Component {
             this.state.sources.map((source) => {
               return(
                 <Route
+                  key={source.id}
                   exact path={`/${source.id}`}
                   render={(props) => (
                     <SourcePageContainer

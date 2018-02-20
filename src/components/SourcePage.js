@@ -10,7 +10,12 @@ const SourcePage = (props) => {
       <div className="source-page-sidebar">
         <div className="source-page-identifier">
           <div className="source-icon-container">
-            <img className="source-icon" src={props.source.faviconURL} alt={props.source.title} />
+            <img
+              className="source-icon"
+              src={props.source.faviconURL}
+              alt={props.source.title}
+              style={{backgroundColor: props.source.primaryColor}}
+            />
           </div>
         </div>
         <Topics

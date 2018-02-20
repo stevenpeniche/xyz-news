@@ -14,6 +14,7 @@ class SourcePageContainer extends Component  {
     this.setState({
       currentTopic: this.props.source.topics[0]
     })
+    this.props.changeCurrentSource(this.props.source.id)
   }
 
   changeCurrentTopic(topic) {

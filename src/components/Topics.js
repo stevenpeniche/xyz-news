@@ -1,5 +1,4 @@
 import React from 'react';
-import shortid from 'shortid';
 import './Topics.css';
 
 const Topics = (props) => {
@@ -13,11 +12,11 @@ const Topics = (props) => {
           {props.topics.map((topic) => {
             return (
               <li
-                className={topic === props.currentTopic ? "topic active-topic" : "topic"}
-                key={shortid.generate()}
-                onClick={() => props.changeCurrentTopic(topic)}
+                className={topic.name === props.currentTopic ? "topic active-topic" : "topic"}
+                key={topic.name}
+                onClick={() => props.changeCurrentTopic(topic.name)}
               >
-                {topic}
+                {topic.name}
               </li>
             )
           })}
