@@ -1,5 +1,5 @@
 .home {
-  height: 100%;
+  min-height: 860px;
   display: flex;
   align-items: center;
   justify-content: center;

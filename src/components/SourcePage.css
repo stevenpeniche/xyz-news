@@ -1,6 +1,6 @@
 .source-page {
-  height: 100%;
-  width: 1000px;
+  min-height: 860px;
+  width: 1240px;
   margin: auto;
   display: grid;
   grid-template-columns: 20% auto;
