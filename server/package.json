@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "client": "cd ../client && yarn start",
-    "server": "nodemon --exec babel-node server.js",
-    "babel-node": "babel-node --presets es2015 ",
-    "dev": "concurrently --kill-others \"yarn server\" \"yarn client\""
+    "server": "babel-watch server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "dotenv": "^5.0.0",
@@ -13,8 +12,9 @@
     "newsapi": "^2.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^2.0.7",
     "concurrently": "^3.5.1"
   },
   "license": "UNLICENSED",
