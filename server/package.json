@@ -3,13 +3,18 @@
   "version": "0.1.0",
   "scripts": {
     "client": "cd ../client && yarn start",
-    "server": "nodemon server.js",
+    "server": "nodemon --exec babel-node server.js",
+    "babel-node": "babel-node --presets es2015 ",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "express": "^4.16.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "concurrently": "^3.5.1"
-  }
+  },
+  "author": "Steven Peniche",
+  "license": "UNLICENSED"
 }
