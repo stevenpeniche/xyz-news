@@ -1,11 +1,13 @@
 .news-feed-container {
+  /* width: 50%; */
   margin-top: 40px;
 }
 
 .news-feed-cards-container {
+  max-height: 1040px;
   display: flex;
-  flex-wrap: wrap;
-  margin-left: 15px;
+  flex-flow: column wrap;
+  align-items: center;
 }
 
 .news-feed-card {

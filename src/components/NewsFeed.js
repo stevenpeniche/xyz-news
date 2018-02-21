@@ -2,7 +2,21 @@ import React from 'react';
 import './NewsFeed.css';
 
 const NewsFeed = (props) => {
-  let array = [{hasImage: false}, {hasImage: true}, {hasImage: false}, {hasImage: true}];
+  let array = [
+    {hasImage: false},
+    {hasImage: true},
+    {hasImage: false},
+    {hasImage: true},
+    {hasImage: true},
+    {hasImage: false},
+    {hasImage: true},
+    {hasImage: false},
+    {hasImage: false},
+    {hasImage: false},
+    {hasImage: true},
+    {hasImage: true},
+    {hasImage: false},
+  ];
 
   return (
     <div className="news-feed-container">
