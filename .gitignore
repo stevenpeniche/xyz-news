@@ -8,7 +8,7 @@
 /build
 
 #server
-server.js
+server
 
 # misc
 .DS_Store
