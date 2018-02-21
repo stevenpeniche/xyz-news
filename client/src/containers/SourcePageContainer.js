@@ -30,7 +30,7 @@ class SourcePageContainer extends Component  {
     this.callAPI(`/newsapi?source=${this.props.source.id}`)
         .then(res => {
           this.setState({
-            currentTopic: this.props.source.topics[0],
+            currentTopic: this.props.source.topics[0].name,
             topicData: res.data
           });
         })

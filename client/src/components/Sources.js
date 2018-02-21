@@ -9,7 +9,7 @@ const Sources = (props) => {
       return (
         <Link to={`/${source.id}`} key={source.id} className="source" >
           <div className="source-icon-container">
-            <img className="source-icon leviate" src={source.faviconURL} alt={source.title} style={{backgroundColor: source.primaryColor}}/>
+            <img className="source-icon levitate" src={source.faviconURL} alt={source.title} style={{backgroundColor: source.primaryColor}}/>
           </div>
           <div className="source-title">
             {source.title}

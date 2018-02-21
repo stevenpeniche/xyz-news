@@ -46,32 +46,25 @@ class App extends Component {
           primaryColor: '#000000',
           topics: [
             {
-              name: 'Top',
-              data: []
+              name: 'Top'
             },
             {
-              name: 'MLB',
-              data: []
+              name: 'MLB'
             },
             {
-              name: 'NFL',
-              data: []
+              name: 'NFL'
             },
             {
-              name: 'NBA',
-              data: []
+              name: 'NBA'
             },
             {
-              name: 'UFC',
-              data: []
+              name: 'UFC'
             },
             {
-              name: 'Boxing',
-              data: []
+              name: 'Boxing'
             },
             {
-              name: 'Wrestling',
-              data: []
+              name: 'Wrestling'
             }
           ]
         }

@@ -25,7 +25,7 @@ const SourcePage = (props) => {
       </div>
       <div className="source-page-main">
         <SearchBar />
-        <NewsFeed />
+        <NewsFeed topicData={props.topicData}/>
       </div>
     </div>
   );

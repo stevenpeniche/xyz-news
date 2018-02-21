@@ -1,49 +1,36 @@
 import React from 'react';
+import shortid from 'shortid';
 import './NewsFeed.css';
 
 const NewsFeed = (props) => {
-  let array = [
-    {hasImage: false},
-    {hasImage: true},
-    {hasImage: false},
-    {hasImage: true},
-    {hasImage: true},
-    {hasImage: false},
-    {hasImage: true},
-    {hasImage: false},
-    {hasImage: false},
-    {hasImage: false},
-    {hasImage: true},
-    {hasImage: true},
-    {hasImage: false},
-  ];
-
   return (
     <div className="news-feed-container">
       <div className="news-feed-cards-container">
       {
-        array.map((article, i) => {
+        props.topicData.map((article) => {
           return (
-            <div className="news-feed-card" key={i}>
-              {
-                article.hasImage ?
-                <div className="news-feed-card-img-container">
-                  <img
-                    className="news-feed-card-img"
-                    src="http://via.placeholder.com/280x300"
-                    alt="news"
-                  />
+            <a className="news-feed-card-link" href={article.url} target="_blank">
+              <div className="news-feed-card levitate" key={shortid.generate()}>
+                {
+                  article.urlToImage !== null?
+                  <div className="news-feed-card-img-container">
+                    <img
+                      className="news-feed-card-img"
+                      src={article.urlToImage}
+                      alt="news"
+                    />
+                  </div>
+                  :
+                  <div></div>
+                }
+                <div className="news-feed-card-title">
+                  {article.title}
                 </div>
-                :
-                <div></div>
-              }
-              <div className="news-feed-card-title">
-                My YC app: Dropbox - Throw awaydsfdsffdsf your USB drive
+                <div className="news-feed-card-author">
+                  - {article.author}
+                </div>
               </div>
-              <div className="news-feed-card-author">
-                - Steven Peniche
-              </div>
-            </div>
+            </a>
           )
         })
       }
