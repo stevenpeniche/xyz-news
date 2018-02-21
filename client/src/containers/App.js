@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import HomeContainer from './HomeContainer';
@@ -15,7 +14,6 @@ class App extends Component {
     super(props);
     this.changeCurrentSource = this.changeCurrentSource.bind(this);
     this.state = {
-      response: '',
       sources: [
         {
           id: 'hacker-news',
@@ -47,6 +45,10 @@ class App extends Component {
           faviconURL: faviconFinder('https://bleacherreport.com'),
           primaryColor: '#000000',
           topics: [
+            {
+              name: 'Top',
+              data: []
+            },
             {
               name: 'MLB',
               data: []
@@ -82,22 +84,7 @@ class App extends Component {
     this.setState({
       currentSourceID: source
     });
-  }
-
-  componentDidMount() {
-    this.callAPI()
-      .then(res => console.log(res))
-      .catch(err => console.log(err));
-  }
-
-  callAPI = async () => {
-    const response = await axios.get('/api/hello');
-    const body = await response;
-
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  }
+  };
 
   render() {
     return (
