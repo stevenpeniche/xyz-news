@@ -11,6 +11,7 @@
 }
 
 .news-feed-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,16 +25,26 @@
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  overflow: hidden;
 }
 
 .news-feed-card-img-container {
   order: 1;
+  height: 220px;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 260px;
-  height: 220px;
   overflow: hidden;
+}
+
+.news-feed-card-img-container:after {
+  content: "";
+  position: absolute;
+  top: 190px;
+  left: 0;
+  border-style: solid;
+  border-width: 0 0 30px 280px;
+  border-color: transparent transparent white;
 }
 
 .news-feed-card-title {

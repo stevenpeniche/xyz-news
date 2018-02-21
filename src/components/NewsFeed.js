@@ -30,7 +30,7 @@ const NewsFeed = (props) => {
                 <div className="news-feed-card-img-container">
                   <img
                     className="news-feed-card-img"
-                    src="http://via.placeholder.com/280x200"
+                    src="http://via.placeholder.com/280x300"
                     alt="news"
                   />
                 </div>
