@@ -39,11 +39,12 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
 .news-feed-card-img {
-  max-width: 290px;
+  max-width: 400px;
 }
 
 .news-feed-card-img-container:after {

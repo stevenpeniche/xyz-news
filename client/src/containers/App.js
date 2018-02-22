@@ -16,26 +16,6 @@ class App extends Component {
     this.state = {
       sources: [
         {
-          id: 'hacker-news',
-          title: 'Hacker News',
-          faviconURL: faviconFinder('https://news.ycombinator.com'),
-          primaryColor: '#ff6600',
-          topics: [
-            {
-              name: 'Top'
-            },
-            {
-              name: 'New'
-            },
-            {
-              name: 'Ask'
-            },
-            {
-              name: 'Jobs'
-            }
-          ]
-        },
-        {
           id: 'bleacher-report',
           title: 'Bleacher Report',
           faviconURL: faviconFinder('https://bleacherreport.com'),
@@ -61,6 +41,107 @@ class App extends Component {
             },
             {
               name: 'WWE'
+            }
+          ]
+        },
+        {
+          id: 'cnn',
+          title: 'CNN',
+          faviconURL: faviconFinder('https://www.cnn.com/'),
+          primaryColor: '#cc0000',
+          topics: [
+            {
+              name: 'Top'
+            },
+            {
+              name: 'World'
+            },
+            {
+              name: 'Politics'
+            },
+            {
+              name: 'Money'
+            },
+            {
+              name: 'Health'
+            },
+            {
+              name: 'Travel'
+            },
+            {
+              name: 'Tech'
+            }
+          ]
+        },
+        {
+          id: 'vice-news',
+          title: 'Vice News',
+          faviconURL: faviconFinder('https://news.vice.com/en_us'),
+          primaryColor: '#000000',
+          topics: [
+            {
+              name: 'Top'
+            },
+            {
+              name: 'Drugs'
+            },
+            {
+              name: 'Tech'
+            },
+            {
+              name: 'Money'
+            },
+            {
+              name: 'Immigration'
+            },
+            {
+              name: 'Politics'
+            },
+            {
+              name: 'Terrorism'
+            }
+          ]
+        },
+        {
+          id: 'techcrunch',
+          title: 'TechCrunch',
+          faviconURL: faviconFinder('https://techcrunch.com/'),
+          primaryColor: '#0D9307',
+          topics: [
+            {
+              name: 'Top'
+            },
+            {
+              name: 'Apple'
+            }
+          ]
+        },
+        {
+          id: 'crypto-coins-news',
+          title: 'Crypto News',
+          faviconURL: faviconFinder('https://www.ccn.com/'),
+          primaryColor: '#fea339',
+          topics: [
+            {
+              name: 'Top'
+            },
+            {
+              name: 'Bitcoin'
+            },
+            {
+              name: 'Ethereum'
+            },
+            {
+              name: 'Litecoin'
+            },
+            {
+              name: 'Ripple'
+            },
+            {
+              name: 'Monero'
+            },
+            {
+              name: 'Iota'
             }
           ]
         }

@@ -18,6 +18,7 @@ const NewsFeed = (props) => {
                       className="news-feed-card-img"
                       src={article.urlToImage}
                       alt="news"
+                      style={article.source.id === "bleacher-report"? {maxWidth: "280px"}:{} }
                     />
                   </div>
                   :
