@@ -7,15 +7,32 @@ class SourcePageContainer extends Component  {
     super(props);
     this.changeCurrentTopic = this.changeCurrentTopic.bind(this);
     this.state = {
-      currentTopic: null,
+      currentTopic: 'Top',
       topicData: []
     };
   }
 
   changeCurrentTopic(topic) {
-    this.setState({
-      currentTopic: topic
-    });
+    const source = this.props.source
+
+    if(topic !== this.state.currentTopic) {
+      const apiPath =  topic === 'Top' ?
+                      `/newsapi?source=${source.id}` :
+                      `/newsapi?source=${source.id}&q=${topic}`;
+
+      this.callAPI(apiPath)
+          .then(res => {
+            this.setState({
+              currentTopic: topic,
+              topicData: res.data
+            });
+          })
+          .catch(err => console.log(err));
+
+      this.setState({
+        currentTopic: topic
+      });
+    }
   };
 
   callAPI = async (path) => {
@@ -26,11 +43,12 @@ class SourcePageContainer extends Component  {
   }
 
   componentDidMount() {
-    this.props.changeCurrentSource(this.props.source.id);
-    this.callAPI(`/newsapi?source=${this.props.source.id}`)
+    const source = this.props.source
+    this.props.changeCurrentSource(source.id);
+
+    this.callAPI(`/newsapi?source=${source.id}`)
         .then(res => {
           this.setState({
-            currentTopic: this.props.source.topics[0].name,
             topicData: res.data
           });
         })

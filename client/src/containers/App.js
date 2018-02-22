@@ -22,20 +22,16 @@ class App extends Component {
           primaryColor: '#ff6600',
           topics: [
             {
-              name: 'Top',
-              data: []
+              name: 'Top'
             },
             {
-              name: 'New',
-              data: []
+              name: 'New'
             },
             {
-              name: 'Ask',
-              data: []
+              name: 'Ask'
             },
             {
-              name: 'Jobs',
-              data: []
+              name: 'Jobs'
             }
           ]
         },
@@ -64,7 +60,7 @@ class App extends Component {
               name: 'Boxing'
             },
             {
-              name: 'Wrestling'
+              name: 'WWE'
             }
           ]
         }
