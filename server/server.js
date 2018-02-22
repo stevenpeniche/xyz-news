@@ -15,7 +15,8 @@ app.get('/newsapi', (req, res) => {
     if(source && !keyword) {
       newsapi.v2.everything({
         sources: source,
-        language: 'en'
+        language: 'en',
+        pageSize: 100
       }).then((response) => {
         res.status(200).send(response.articles);
       });
@@ -24,12 +25,14 @@ app.get('/newsapi', (req, res) => {
         sources: source,
         q: keyword,
         sortBy: 'publishedAt',
-        language: 'en'
+        language: 'en',
+        pageSize: 100
       }).then((response) => {
         res.status(200).send(response.articles);
       });
+    } else {
+      res.status(400).send();
     }
-
   } else {
     res.status(400).send();
   }
