@@ -79,3 +79,9 @@
 .source-page-search-input:focus {
   outline: none;
 }
+
+.jump-icon {
+  position: fixed;
+  bottom: 2%;
+  font-size: 42px;
+}
