@@ -65,6 +65,8 @@
   order: 2;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   word-wrap: break-word;
   overflow: hidden;
   color: #000000;

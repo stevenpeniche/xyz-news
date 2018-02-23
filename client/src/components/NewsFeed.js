@@ -28,7 +28,7 @@ const NewsFeed = (props) => {
                   {article.title}
                 </div>
                 <div className="news-feed-card-author">
-                  - {article.author}
+                  {article.author ? `- ${article.author}` : ""}
                 </div>
               </div>
             </a>
