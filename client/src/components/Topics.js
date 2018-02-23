@@ -4,7 +4,7 @@ import './Topics.css';
 const Topics = (props) => {
   return (
     <div className="source-topics-container">
-      <div className="source-topics">
+      <div className="source-topics animated fadeIn">
         <div className="topics-header">
           Topics
         </div>

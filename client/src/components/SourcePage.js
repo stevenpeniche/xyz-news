@@ -11,7 +11,7 @@ const SourcePage = (props) => {
         <div className="source-page-identifier">
           <div className="source-icon-container">
             <img
-              className="source-icon"
+              className="source-icon animated fadeIn"
               src={props.source.faviconURL}
               alt={props.source.title}
               style={{backgroundColor: props.source.primaryColor}}

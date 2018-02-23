@@ -10,10 +10,10 @@ const NewsFeed = (props) => {
         props.topicData.map((article) => {
           return (
             <a className="news-feed-card-link" key={shortid.generate()} href={article.url} target="_blank">
-              <div className="news-feed-card levitate" >
+              <div className="news-feed-card levitate animated fadeIn" >
                 {
                   article.urlToImage !== null?
-                  <div className="news-feed-card-img-container">
+                  <div className="news-feed-card-img-container animated fadeIn">
                     <img
                       className="news-feed-card-img"
                       src={article.urlToImage}

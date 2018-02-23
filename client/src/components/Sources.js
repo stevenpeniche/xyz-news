@@ -4,10 +4,10 @@ import './Sources.css';
 
 const Sources = (props) => {
   return (
-    <div className="sources">
+    <div className="sources animated fadeInDown">
     {props.sources.map((source) => {
       return (
-        <Link to={`/${source.id}`} key={source.id} className="source" >
+        <Link to={`/${source.id}`} key={source.id} className="source animated fadeIn" >
           <div className="source-icon-container">
             <img className="source-icon levitate" src={source.faviconURL} alt={source.title} style={{backgroundColor: source.primaryColor}}/>
           </div>

@@ -31,6 +31,8 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   overflow: hidden;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  animation-delay: .4s;
+  animation-duration: 1.5s;
 }
 
 .news-feed-card-img-container {
@@ -41,6 +43,8 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  animation-delay: .8s;
+  animation-duration: 1.5s;
 }
 
 .news-feed-card-img {
