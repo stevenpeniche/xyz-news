@@ -28,7 +28,10 @@ const NewsFeed = (props) => {
                   {article.title}
                 </div>
                 <div className="news-feed-card-author">
-                  {article.author ? `- ${article.author}` : ""}
+                  {article.author ? `by ${article.author}` : ""}
+                </div>
+                <div className="news-feed-card-description">
+                  {article.description ? article.description : ""}
                 </div>
               </div>
             </a>
