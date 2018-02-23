@@ -1,10 +1,9 @@
 .news-feed-container {
-  /* width: 50%; */
   margin-top: 40px;
 }
 
 .news-feed-cards-container {
-  max-height:11880px;
+  max-height: 12050px;
   display: flex;
   flex-flow: column wrap;
   align-items: center;

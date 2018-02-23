@@ -1,6 +1,6 @@
 import React from 'react';
 import Topics from './Topics';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar'; Hide for Now
 import NewsFeed from './NewsFeed';
 import './SourcePage.css';
 
@@ -24,7 +24,6 @@ const SourcePage = (props) => {
           changeCurrentTopic={props.changeCurrentTopic}/>
       </div>
       <div className="source-page-main">
-        <SearchBar />
         <NewsFeed topicData={props.topicData}/>
       </div>
     </div>
