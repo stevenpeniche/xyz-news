@@ -160,7 +160,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <NavBar currentSourceID={this.state.currentSourceID}/>
+          <NavBar
+            currentSourceID={this.state.currentSourceID}
+            sources={this.state.sources}
+          />
           <Route
             exact path="/"
             render={() => (
