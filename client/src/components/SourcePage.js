@@ -1,8 +1,8 @@
 import React from 'react';
-import Waypoint from 'react-waypoint';
 import Topics from './Topics';
 // import SearchBar from './SearchBar'; Hide for Now
 import NewsFeed from './NewsFeed';
+import JumpToTop from './JumpToTop'
 import './SourcePage.css';
 
 const SourcePage = (props) => {
@@ -27,13 +27,7 @@ const SourcePage = (props) => {
       <div className="source-page-main">
         <NewsFeed topicData={props.topicData}/>
       </div>
-      <Waypoint
-        onEnter={console.log('Entered')}
-        bottomOffset='-2000px'>
-        <div className="jump-icon">
-          <i className="fas fa-angle-double-up"></i>
-        </div>
-      </Waypoint>
+      <JumpToTop />
     </div>
   );
 };
