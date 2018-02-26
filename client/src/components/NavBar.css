@@ -80,4 +80,7 @@
   margin-left: 20px;
 }
 
+.scroll-to-top-section:hover {
+  cursor: pointer;
+}
 

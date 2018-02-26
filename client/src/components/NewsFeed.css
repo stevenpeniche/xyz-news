@@ -2,13 +2,6 @@
   margin-top: 40px;
 }
 
-.news-feed-cards-container {
-  max-height: 16400px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-}
-
 .news-feed-card-link {
   text-decoration: none;
 }
