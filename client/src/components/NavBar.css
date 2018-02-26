@@ -73,4 +73,11 @@
   margin-top: 10px;
 }
 
+.scroll-to-top-section {
+  order: 3;
+  flex-grow: 1;
+  height: 100%;
+  margin-left: 20px;
+}
+
 

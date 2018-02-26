@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import { animateScroll as scroll } from 'react-scroll';
 import shortid from 'shortid';
 import './NavBar.css';
 
 class NavBar extends Component {
   state = {
     menuActive: false
+  }
+
+  scrollToTop() {
+    scroll.scrollToTop();
   }
 
   setMenuStatus = (target) => {
@@ -58,6 +63,9 @@ class NavBar extends Component {
           :
           <div></div>
         }
+        <div className="scroll-to-top-section"  onClick={this.scrollToTop}>
+        ...
+        </div>
       </nav>
     );
   }
