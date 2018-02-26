@@ -5,6 +5,10 @@ import NewsAPI from 'newsapi';
 const app = express();
 const port = process.env.PORT;
 
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static('../client/build'));
+}
+
 const newsapi = new NewsAPI(process.env.NEWS_API_KEY);
 
 app.get('/newsapi', (req, res) => {
