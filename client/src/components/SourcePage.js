@@ -19,6 +19,7 @@ const SourcePage = (props) => {
           </div>
         </div>
         <Topics
+          sourceColor={props.source.primaryColor}
           topics={props.source.topics}
           currentTopic={props.currentTopic}
           changeCurrentTopic={props.changeCurrentTopic}/>
