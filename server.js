@@ -1,12 +1,13 @@
 import express from 'express';
 require('dotenv').config();
 import NewsAPI from 'newsapi';
+import * as path from 'path';
 
 const app = express();
 const port = process.env.PORT;
 
 if(process.env.NODE_ENV === 'production') {
-  app.use(express.static('../client/build'));
+  app.use(express.static("client/build"));
 }
 
 const newsapi = new NewsAPI(process.env.NEWS_API_KEY);

@@ -2,7 +2,7 @@
   "name": "xyz-news-api",
   "version": "0.1.0",
   "scripts": {
-    "client": "cd ../client && yarn start",
+    "client": "cd client && yarn start",
     "server": "babel-watch server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
