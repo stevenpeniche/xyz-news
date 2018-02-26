@@ -16,9 +16,4 @@
 
 .topic:hover {
   cursor: pointer;
-  color: #ff6600;
-}
-
-.active-topic {
-  color: #ff6600;
 }
