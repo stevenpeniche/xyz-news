@@ -17,13 +17,15 @@ const Topics = (props) => {
         </div>
         <ul className="topics-list">
           {props.topics.map((topic) => {
+            const sourceColor = props.sourceColor === "#000000" ? "#A9A9A9" : props.sourceColor
+
             return (
               <li
                 className={topic.name === props.currentTopic ? "topic active-topic" : "topic"}
-                style={topic.name === props.currentTopic ? {color: props.sourceColor} : {}}
+                style={topic.name === props.currentTopic ? {color: sourceColor} : {}}
                 key={topic.name}
                 onClick={() => props.changeCurrentTopic(topic.name)}
-                onMouseOver={(e) => handleTopicColor(e, () => e.target.style.color = props.sourceColor)}
+                onMouseOver={(e) => handleTopicColor(e, () => e.target.style.color = sourceColor)}
                 onMouseOut={(e) => handleTopicColor(e, () => e.target.style.color = "#000000")}
               >
                 {topic.name}
