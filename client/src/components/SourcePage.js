@@ -2,7 +2,6 @@ import React from 'react';
 import Topics from './Topics';
 // import SearchBar from './SearchBar'; Hide for Now
 import NewsFeed from './NewsFeed';
-import JumpToTop from './JumpToTop'
 import './SourcePage.css';
 
 const SourcePage = (props) => {
@@ -27,7 +26,6 @@ const SourcePage = (props) => {
       <div className="source-page-main">
         <NewsFeed topicData={props.topicData}/>
       </div>
-      <JumpToTop />
     </div>
   );
 };
