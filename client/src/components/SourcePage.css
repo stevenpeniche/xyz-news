@@ -90,7 +90,7 @@
     margin: auto;
     display: grid;
     grid-template-columns: 0;
-    grid-template-rows: 38px 140px auto;
+    grid-template-rows: 38px auto auto;
   }
 
    .source-page-sidebar {
@@ -110,6 +110,7 @@
   .topics-list {
     margin-top: 0;
     padding-left: 0;
+    text-align: center;
   }
 
   .topics-list li {

@@ -91,6 +91,10 @@
 
 /* Mobile Devices */
 @media only screen and (max-width: 414px) {
+  .news-feed-container {
+    margin-top: 0;
+  }
+
   .news-feed-card {
     margin-left: auto;
     margin-right: auto;
