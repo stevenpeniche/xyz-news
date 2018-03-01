@@ -1,6 +1,13 @@
 .home {
-  min-height: 860px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 414px) {
+  .sources {
+    width: 80vw;
+  }
 }

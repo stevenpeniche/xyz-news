@@ -5,7 +5,7 @@ import './Home.css';
 const Home = (props) => {
   return (
     <div className="home">
-      <Sources sources={props.sources}/>
+      <Sources className ="sources" sources={props.sources}/>
     </div>
   );
 }

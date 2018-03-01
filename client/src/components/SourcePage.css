@@ -123,7 +123,7 @@
   }
 }
 
-/* Mobile Devices */
+/* Landscape Mobile Devices */
 @media only screen and (max-width: 812px) and (orientation: landscape) {
   .source-page {
     max-width: 1240px;
