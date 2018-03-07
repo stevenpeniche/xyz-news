@@ -8,7 +8,7 @@ class HomeContainer extends Component {
 
   render() {
     return (
-      <Home className="home-component" sources={this.props.sources}/>
+      <Home sources={this.props.sources}/>
     );
   }
 }

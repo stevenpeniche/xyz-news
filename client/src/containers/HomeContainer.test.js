@@ -5,21 +5,26 @@ import App from './App';
 import HomeContainer from './HomeContainer';
 import Home from '../components/Home';
 
-describe('HomeContainer rendering', () => {
-  const options = new ReactRouterEnzymeContext();
-  const app = shallow(<App />);
-  const changeSourceSpy = jest.spyOn(app.instance(), 'changeCurrentSource');
-  const wrapper =
+let options, app, changeSourceSpy, wrapper;
+
+beforeAll(() => {
+  options = new ReactRouterEnzymeContext();
+  app = shallow(<App />);
+  changeSourceSpy = jest.spyOn(app.instance(), 'changeCurrentSource');
+  wrapper =
     mount(<HomeContainer
       sources={app.state().sources}
       changeCurrentSource={app.instance().changeCurrentSource} />, options.get())
 
+});
+
+describe('HomeContainer rendering', () => {
   it('renders without crashing', () => {
     wrapper
   });
 
   it('renders the Home component once', () => {
-    expect(wrapper.find('.home-component').length).toBe(1)
+    expect(wrapper.find(Home).length).toBe(1)
   });
 
   it('calls changeCurrentSource once', () => {

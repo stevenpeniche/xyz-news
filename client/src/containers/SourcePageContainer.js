@@ -12,7 +12,7 @@ class SourcePageContainer extends Component  {
     };
   }
 
-  changeCurrentTopic(topic) {
+  changeCurrentTopic(topic, callback) {
     const source = this.props.source
 
     if(topic !== this.state.currentTopic) {
@@ -20,7 +20,7 @@ class SourcePageContainer extends Component  {
                       `/newsapi?source=${source.id}` :
                       `/newsapi?source=${source.id}&q=${topic}`;
 
-      this.callAPI(apiPath)
+      this.callAPI(apiPath, callback)
           .then(res => {
             this.setState({
               currentTopic: topic,
@@ -28,37 +28,37 @@ class SourcePageContainer extends Component  {
             });
           })
           .catch(err => console.log(err));
-
-      this.setState({
-        currentTopic: topic
-      });
     }
   };
 
-  callAPI = async (path) => {
-    const response = await axios.get(path);
-    const body = await response;
-
+  callAPI = async (path, callback) => {
+    let body;
+    if(callback){ // For testing purposes
+      body = callback();
+    } else {
+      const response = await axios.get(path);
+      body = await response;
+    }
     return body;
   }
 
-  componentDidMount() {
+  componentDidMount(callback) {
+    // callback is for testing purposes
     const source = this.props.source
     this.props.changeCurrentSource(source.id);
 
-    this.callAPI(`/newsapi?source=${source.id}`)
-        .then(res => {
-          this.setState({
-            topicData: res.data
-          });
-        })
-        .catch(err => console.log(err));
+    this.callAPI(`/newsapi?source=${source.id}`, callback)
+    .then(res => {
+      this.setState({
+        topicData: res.data
+      });
+    })
+    .catch(err => console.log(err));
   }
 
   render() {
     return (
       <SourcePage
-        className="source-page-component"
         source={this.props.source}
         currentTopic={this.state.currentTopic}
         changeCurrentTopic={this.changeCurrentTopic}

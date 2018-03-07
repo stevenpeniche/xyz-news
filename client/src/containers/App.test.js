@@ -1,14 +1,18 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import { BrowserRouter, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import HomeContainer from './HomeContainer';
-import SourcePageContainer from './SourcePageContainer';
+
+let wrapper;
+
+beforeEach(() => {
+  wrapper = shallow(<App />)
+});
 
 describe('App rendering', () => {
-  const wrapper = shallow(<App />)
   it('renders without crashing', () => {
     wrapper
   });
@@ -37,7 +41,6 @@ describe('App rendering', () => {
 });
 
 describe("App initial state", () => {
-  const wrapper = shallow(<App />)
   it("sets initial state of currentSourceID to null", () => {
     expect(wrapper.state().currentSourceID).toBe(null);
   })
@@ -45,14 +48,12 @@ describe("App initial state", () => {
 
 describe("#changeCurrentSource", () => {
   it("sets the correct currentSourceID", () => {
-    const wrapper = shallow(<App />)
     expect(wrapper.state().currentSourceID).toBe(null);
     wrapper.instance().changeCurrentSource('espn');
     expect(wrapper.state().currentSourceID).toBe('espn');
   });
 
   it("sets the currentSourceID to null if none is passed", () => {
-    const wrapper = shallow(<App />)
     expect(wrapper.state().currentSourceID).toBe(null);
     wrapper.instance().changeCurrentSource();
     expect(wrapper.state().currentSourceID).toBe(null);
