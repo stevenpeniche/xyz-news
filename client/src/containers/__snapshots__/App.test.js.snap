@@ -1,0 +1,159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App rendering renders correctly 1`] = `
+<div
+  className="app"
+>
+  <nav
+    className="nav-bar"
+  >
+    <a
+      href="/"
+      id="logo"
+      onClick={[Function]}
+    >
+      XYZ news
+    </a>
+    <div />
+    <div
+      className="scroll-to-top-section"
+      onClick={[Function]}
+    >
+      ...
+    </div>
+  </nav>
+  <div
+    className="home"
+  >
+    <div
+      className="sources animated fadeInDown"
+    >
+      <a
+        className="source animated fadeIn"
+        href="/bleacher-report"
+        onClick={[Function]}
+      >
+        <div
+          className="source-icon-container"
+        >
+          <img
+            alt="Bleacher Report"
+            className="source-icon levitate"
+            src="https://besticon-demo.herokuapp.com/icon?url=https://bleacherreport.com/&size=70..120..200"
+            style={
+              Object {
+                "backgroundColor": "#000000",
+              }
+            }
+          />
+        </div>
+        <div
+          className="source-title"
+        >
+          Bleacher Report
+        </div>
+      </a>
+      <a
+        className="source animated fadeIn"
+        href="/cnn"
+        onClick={[Function]}
+      >
+        <div
+          className="source-icon-container"
+        >
+          <img
+            alt="CNN"
+            className="source-icon levitate"
+            src="https://besticon-demo.herokuapp.com/icon?url=https://www.cnn.com//&size=70..120..200"
+            style={
+              Object {
+                "backgroundColor": "#cc0000",
+              }
+            }
+          />
+        </div>
+        <div
+          className="source-title"
+        >
+          CNN
+        </div>
+      </a>
+      <a
+        className="source animated fadeIn"
+        href="/vice-news"
+        onClick={[Function]}
+      >
+        <div
+          className="source-icon-container"
+        >
+          <img
+            alt="Vice News"
+            className="source-icon levitate"
+            src="https://besticon-demo.herokuapp.com/icon?url=https://news.vice.com/en_us/&size=70..120..200"
+            style={
+              Object {
+                "backgroundColor": "#000000",
+              }
+            }
+          />
+        </div>
+        <div
+          className="source-title"
+        >
+          Vice News
+        </div>
+      </a>
+      <a
+        className="source animated fadeIn"
+        href="/techcrunch"
+        onClick={[Function]}
+      >
+        <div
+          className="source-icon-container"
+        >
+          <img
+            alt="TechCrunch"
+            className="source-icon levitate"
+            src="https://besticon-demo.herokuapp.com/icon?url=https://techcrunch.com//&size=70..120..200"
+            style={
+              Object {
+                "backgroundColor": "#0D9307",
+              }
+            }
+          />
+        </div>
+        <div
+          className="source-title"
+        >
+          TechCrunch
+        </div>
+      </a>
+      <a
+        className="source animated fadeIn"
+        href="/crypto-coins-news"
+        onClick={[Function]}
+      >
+        <div
+          className="source-icon-container"
+        >
+          <img
+            alt="Crypto News"
+            className="source-icon levitate"
+            src="https://besticon-demo.herokuapp.com/icon?url=https://www.ccn.com//&size=70..120..200"
+            style={
+              Object {
+                "backgroundColor": "#fea339",
+              }
+            }
+          />
+        </div>
+        <div
+          className="source-title"
+        >
+          Crypto News
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;

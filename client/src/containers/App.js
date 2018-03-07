@@ -165,6 +165,7 @@ class App extends Component {
             sources={this.state.sources}
           />
           <Route
+            className="home-route"
             exact path="/"
             render={() => (
               <HomeContainer
@@ -177,6 +178,7 @@ class App extends Component {
             this.state.sources.map((source) => {
               return(
                 <Route
+                  className="source-page-route"
                   key={source.id}
                   exact path={`/${source.id}`}
                   render={(props) => (
