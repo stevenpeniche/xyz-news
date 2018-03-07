@@ -58,6 +58,7 @@ class SourcePageContainer extends Component  {
   render() {
     return (
       <SourcePage
+        className="source-page-component"
         source={this.props.source}
         currentTopic={this.state.currentTopic}
         changeCurrentTopic={this.changeCurrentTopic}
