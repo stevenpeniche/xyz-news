@@ -7,9 +7,8 @@ import NavBar from '../components/NavBar';
 import HomeContainer from './HomeContainer';
 import SourcePageContainer from './SourcePageContainer';
 
-const wrapper = shallow(<App />)
-
 describe('App rendering', () => {
+  const wrapper = shallow(<App />)
   it('renders without crashing', () => {
     wrapper
   });
@@ -38,9 +37,25 @@ describe('App rendering', () => {
 });
 
 describe("App initial state", () => {
-  const state = wrapper.state();
+  const wrapper = shallow(<App />)
   it("sets initial state of currentSourceID to null", () => {
-    expect(state.currentSourceID).toBe(null);
+    expect(wrapper.state().currentSourceID).toBe(null);
   })
+});
+
+describe("#changeCurrentSource", () => {
+  it("sets the correct currentSourceID", () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.state().currentSourceID).toBe(null);
+    wrapper.instance().changeCurrentSource('espn');
+    expect(wrapper.state().currentSourceID).toBe('espn');
+  });
+
+  it("sets the currentSourceID to null if none is passed", () => {
+    const wrapper = shallow(<App />)
+    expect(wrapper.state().currentSourceID).toBe(null);
+    wrapper.instance().changeCurrentSource();
+    expect(wrapper.state().currentSourceID).toBe(null);
+  });
 });
 
