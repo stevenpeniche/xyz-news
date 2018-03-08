@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App rendering renders correctly 1`] = `
+<div
+  className="source-topics-container"
+>
+  <div
+    className="source-topics animated fadeIn"
+  >
+    <div
+      className="topics-header"
+    >
+      Topics
+    </div>
+    <ul
+      className="topics-list"
+    >
+      <li
+        className="topic active-topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={
+          Object {
+            "color": "#A9A9A9",
+          }
+        }
+      >
+        Top
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        MLB
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        NFL
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        NBA
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        UFC
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        Boxing
+      </li>
+      <li
+        className="topic"
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        style={Object {}}
+      >
+        WWE
+      </li>
+    </ul>
+  </div>
+</div>
+`;
