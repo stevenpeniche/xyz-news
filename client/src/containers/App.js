@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import NavBar from '../components/NavBar';
+import NavBarContainer from './NavBarContainer';
 import HomeContainer from './HomeContainer';
 import SourcePageContainer from './SourcePageContainer';
 import './App.css';
@@ -160,7 +160,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="app">
-          <NavBar
+          <NavBarContainer
             currentSourceID={this.state.currentSourceID}
             sources={this.state.sources}
           />

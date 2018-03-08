@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { animateScroll as scroll } from 'react-scroll';
 import shortid from 'shortid';
-import './NavBar.css';
+import './NavBarContainer.css';
 
 class NavBar extends Component {
   state = {

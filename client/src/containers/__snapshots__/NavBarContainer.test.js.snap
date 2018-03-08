@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBarContainer rendering renders correctly 1`] = `
+<nav
+  className="nav-bar"
+>
+  <a
+    href="/"
+    id="logo"
+    onClick={[Function]}
+  >
+    XYZ news
+  </a>
+  <div />
+  <div
+    className="scroll-to-top-section"
+    onClick={[Function]}
+  >
+    ...
+  </div>
+</nav>
+`;

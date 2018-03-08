@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
-import NavBar from '../components/NavBar';
+import NavBarContainer from './NavBarContainer';
 import HomeContainer from './HomeContainer';
 
 let wrapper;
@@ -23,7 +23,7 @@ describe('App rendering', () => {
   });
 
   it("renders the NavBar once", () => {
-    expect(wrapper.find(NavBar).length).toEqual(1);
+    expect(wrapper.find(NavBarContainer).length).toEqual(1);
   });
 
   it("renders the BrowserRouter once", () => {
