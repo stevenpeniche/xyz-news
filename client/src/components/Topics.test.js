@@ -49,7 +49,7 @@ beforeAll(() => {
     );
 });
 
-describe('App rendering', () => {
+describe('Topics rendering', () => {
   it('renders without crashing', () => {
     wrapper
   });

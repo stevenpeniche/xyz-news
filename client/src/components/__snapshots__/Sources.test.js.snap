@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sources rendering renders correctly 1`] = `
+<div
+  className="sources animated fadeInDown"
+>
+  <a
+    className="source animated fadeIn"
+    href="/bleacher-report"
+    onClick={[Function]}
+  >
+    <div
+      className="source-icon-container"
+    >
+      <img
+        alt="Bleacher Report"
+        className="source-icon levitate"
+        src="https://besticon-demo.herokuapp.com/icon?url=https://bleacherreport.com/&size=70..120..200"
+        style={
+          Object {
+            "backgroundColor": "#000000",
+          }
+        }
+      />
+    </div>
+    <div
+      className="source-title"
+    >
+      Bleacher Report
+    </div>
+  </a>
+  <a
+    className="source animated fadeIn"
+    href="/cnn"
+    onClick={[Function]}
+  >
+    <div
+      className="source-icon-container"
+    >
+      <img
+        alt="CNN"
+        className="source-icon levitate"
+        src="https://besticon-demo.herokuapp.com/icon?url=https://bleacherreport.com/&size=70..120..200"
+        style={
+          Object {
+            "backgroundColor": "#cc0000",
+          }
+        }
+      />
+    </div>
+    <div
+      className="source-title"
+    >
+      CNN
+    </div>
+  </a>
+  <a
+    className="source animated fadeIn"
+    href="/vice-news"
+    onClick={[Function]}
+  >
+    <div
+      className="source-icon-container"
+    >
+      <img
+        alt="Vice News"
+        className="source-icon levitate"
+        src="https://besticon-demo.herokuapp.com/icon?url=https://bleacherreport.com/&size=70..120..200"
+        style={
+          Object {
+            "backgroundColor": "#000000",
+          }
+        }
+      />
+    </div>
+    <div
+      className="source-title"
+    >
+      Vice News
+    </div>
+  </a>
+</div>
+`;
