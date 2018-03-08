@@ -22,8 +22,7 @@
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
-    "enzyme-adapter-react-16": "^1.1.1",
-    "react-router-enzyme-context": "^1.2.0"
+    "enzyme-adapter-react-16": "^1.1.1"
   },
   "license": "UNLICENSED",
   "author": "Steven Peniche"

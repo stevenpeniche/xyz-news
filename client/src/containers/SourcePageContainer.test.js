@@ -36,6 +36,7 @@ beforeAll(() => {
       }
     ]
   };
+
   body = {
     data: [
             {
@@ -280,7 +281,9 @@ beforeAll(() => {
             }
           ]
   };
+
   app = shallow(<App />);
+
   callAPI = jest.fn()
 
   callAPI.mockReturnValue(body);

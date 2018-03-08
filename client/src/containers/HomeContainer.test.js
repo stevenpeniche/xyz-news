@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
-import ReactRouterEnzymeContext from 'react-router-enzyme-context';
+import { MemoryRouter } from 'react-router-dom';
 import { shallow, mount } from 'enzyme';
 import App from './App';
 import HomeContainer from './HomeContainer';
 import Home from '../components/Home';
 
-let options, app, changeSourceSpy, wrapper;
+let app, changeSourceSpy, wrapper;
 
 beforeAll(() => {
-  options = new ReactRouterEnzymeContext();
   app = shallow(<App />);
+
   changeSourceSpy = jest.spyOn(app.instance(), 'changeCurrentSource');
+
   wrapper =
-    mount(<HomeContainer
-      sources={app.state().sources}
-      changeCurrentSource={app.instance().changeCurrentSource} />, options.get())
+    mount(
+      <MemoryRouter>
+        <HomeContainer
+          sources={app.state().sources}
+          changeCurrentSource={app.instance().changeCurrentSource}
+        />
+      </MemoryRouter>
+    )
 
 });
 
