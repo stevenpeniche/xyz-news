@@ -1,5 +1,7 @@
 # XYZ news
 
+[![Build Status](https://travis-ci.org/stevenpeniche/xyz-news.svg?branch=master)](#)
+
 A **News Aggregator** where users can browse through multiple news sources and their articles powered by [NewsAPI.org](https://newsapi.org/)
 
 [Live Demo](https://xyznews.herokuapp.com/)
