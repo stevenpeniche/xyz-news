@@ -5,7 +5,8 @@
     "client": "cd client && yarn start",
     "server": "babel-watch server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "build": "cd client && yarn build"
+    "build": "cd client && yarn build",
+    "postinstall": "cd client && yarn install"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
