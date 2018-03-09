@@ -4,7 +4,6 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "babel-watch server.js",
-    "test": "cd client && yarn test",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
