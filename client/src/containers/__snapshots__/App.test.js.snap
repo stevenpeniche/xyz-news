@@ -39,7 +39,7 @@ exports[`App rendering renders correctly 1`] = `
           <img
             alt="Bleacher Report"
             className="source-icon levitate"
-            src="https://besticon-demo.herokuapp.com/icon?url=https://bleacherreport.com/&size=70..120..200"
+            src="/images/br-favicon.png"
             style={
               Object {
                 "backgroundColor": "#000000",
@@ -64,7 +64,7 @@ exports[`App rendering renders correctly 1`] = `
           <img
             alt="CNN"
             className="source-icon levitate"
-            src="https://besticon-demo.herokuapp.com/icon?url=https://www.cnn.com//&size=70..120..200"
+            src="/images/cnn-favicon.png"
             style={
               Object {
                 "backgroundColor": "#cc0000",
@@ -89,7 +89,7 @@ exports[`App rendering renders correctly 1`] = `
           <img
             alt="Vice News"
             className="source-icon levitate"
-            src="https://besticon-demo.herokuapp.com/icon?url=https://news.vice.com/en_us/&size=70..120..200"
+            src="/images/vn-favicon.png"
             style={
               Object {
                 "backgroundColor": "#000000",
@@ -114,7 +114,7 @@ exports[`App rendering renders correctly 1`] = `
           <img
             alt="TechCrunch"
             className="source-icon levitate"
-            src="https://besticon-demo.herokuapp.com/icon?url=https://techcrunch.com//&size=70..120..200"
+            src="/images/tc-favicon.png"
             style={
               Object {
                 "backgroundColor": "#0D9307",
@@ -139,7 +139,7 @@ exports[`App rendering renders correctly 1`] = `
           <img
             alt="Crypto News"
             className="source-icon levitate"
-            src="https://besticon-demo.herokuapp.com/icon?url=https://www.ccn.com//&size=70..120..200"
+            src="/images/cn-favicon.png"
             style={
               Object {
                 "backgroundColor": "#fea339",
