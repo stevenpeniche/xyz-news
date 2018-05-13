@@ -5,10 +5,6 @@ import HomeContainer from './HomeContainer';
 import SourcePageContainer from './SourcePageContainer';
 import './App.css';
 
-const faviconFinder = (rootURL) => {
-  return `https://besticon-demo.herokuapp.com/icon?url=${rootURL}/&size=70..120..200`
-}
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +14,7 @@ class App extends Component {
         {
           id: 'bleacher-report',
           title: 'Bleacher Report',
-          faviconURL: faviconFinder('https://bleacherreport.com'),
+          faviconURL: '/images/br-favicon.png',
           primaryColor: '#000000',
           topics: [
             {
@@ -47,7 +43,7 @@ class App extends Component {
         {
           id: 'cnn',
           title: 'CNN',
-          faviconURL: faviconFinder('https://www.cnn.com/'),
+          faviconURL: '/images/cnn-favicon.png',
           primaryColor: '#cc0000',
           topics: [
             {
@@ -76,7 +72,7 @@ class App extends Component {
         {
           id: 'vice-news',
           title: 'Vice News',
-          faviconURL: faviconFinder('https://news.vice.com/en_us'),
+          faviconURL: '/images/vn-favicon.png',
           primaryColor: '#000000',
           topics: [
             {
@@ -105,7 +101,7 @@ class App extends Component {
         {
           id: 'techcrunch',
           title: 'TechCrunch',
-          faviconURL: faviconFinder('https://techcrunch.com/'),
+          faviconURL: '/images/tc-favicon.png',
           primaryColor: '#0D9307',
           topics: [
             {
@@ -119,7 +115,7 @@ class App extends Component {
         {
           id: 'crypto-coins-news',
           title: 'Crypto News',
-          faviconURL: faviconFinder('https://www.ccn.com/'),
+          faviconURL: '/images/cn-favicon.png',
           primaryColor: '#fea339',
           topics: [
             {
